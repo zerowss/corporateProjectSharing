@@ -25,6 +25,16 @@ export default new Router({
       path: '/detail',
       name: 'detail',
       component: () => import(/* webpackChunkName: "detail" */ './views/detail/index.vue')
+    },
+    {
+      path: '/comp',
+      name: 'comp',
+      component: () => import(/* webpackChunkName: "detail" */ './views/ClassComp.vue')
+    },
+    {
+      path: '/hcomp',
+      name: 'hcomp',
+      component: () => import(/* webpackChunkName: "detail" */ './views/HocComp.vue')
     }
   ]
 })

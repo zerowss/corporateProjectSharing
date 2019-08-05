@@ -1,13 +1,5 @@
-<template>
-    $END$
-</template>
+import BaseComp from './BaseComp'
+import WithHoc from '../../utils/Hoc'
+export default  WithHoc(BaseComp,{
 
-<script>
-    export default {
-        name: "newComp"
-    }
-</script>
-
-<style scoped>
-
-</style>
+})
