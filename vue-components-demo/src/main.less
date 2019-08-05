@@ -1,0 +1,28 @@
+/*定义基础颜色*/
+@root:#d32f2f;
+@left-children: #1976D2;
+@middle-children: #00796B;
+@right-children: #7B1FA2;
+
+.root-color{
+    color: @root;
+    .show-left{
+        color: @left-children;
+    }
+    .show-right{
+        color: @right-children;
+    }
+    .show-middle{
+        color: @middle-children;
+    }
+    .border-left{
+        border: 1px solid @root
+    }
+    .border-middle{
+        border: 1px solid @middle-children
+    }
+    .border-right{
+        border: 1px solid @right-children;
+    }
+}
+
