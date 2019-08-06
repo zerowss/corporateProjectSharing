@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './main.less'
-import './decorator'
 Vue.config.productionTip = false
 
 //创建一个Bus类，负责事件派发,监听及回调管理
