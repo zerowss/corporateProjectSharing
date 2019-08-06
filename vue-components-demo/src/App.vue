@@ -4,8 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link to="/detail">Detail</router-link>|
-      <router-link to="/hcomp">HComp</router-link>|
-      <router-link to="/comp">Comp</router-link>|
+<!--      <router-link to="/hcomp">HComp</router-link>|-->
+      <router-link to="/comp">Comp</router-link>
     </div>
     <router-view/>
   </div>
