@@ -1,6 +1,6 @@
 /*
 *   decorator
-*
+*    查看源码 npx babel decorator.js --out-file complied.js
  */
 
 
@@ -95,9 +95,16 @@ function logF(target,name,descriptor) {
     return descriptor;
 }
 
+function dec(id){
+    console.log('evaluated', id);
+    return () => console.log('executed', id);
+}
+
 
 class Math {
     @logF
+    @dec(1)
+    @dec(2)
     add(a, b) {
         return a + b;
     }
