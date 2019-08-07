@@ -1,12 +1,24 @@
 <template>
     <div class="about">
-        <h1>This is an about page</h1>
+        <p style="color: orangered;">{{msg}}</p>
+        <Detail :title="title" @getMsg="getMsg"></Detail>
     </div>
 </template>
 
-<script>
+<!--标注ts-->
+<script lang="ts">
+    import {Component, Prop, Vue, Emit, Watch} from "vue-property-decorator"
+    import Detail from "../components/detail.vue"; //带着后缀 不然报错
 
-    export default {
 
+    @Component({
+        components: {Detail}
+    })
+    export default class About extends Vue {
+        title = 'About Detail'
+        msg = ''
+        getMsg(msg:string){
+            this.msg = msg
+        }
     }
 </script>
