@@ -132,7 +132,7 @@
 
         @Prop({default: 'Detail'}) private title!: string //断言
 
-        private tableData: TableData[] = []
+        private tableData: Array<TableData> = []
         private formInline = {
             user: '',
             region: ''
@@ -142,8 +142,14 @@
 
         async onSubmit() {
             const res = await getTableList(this.formInline)
-            this.tableData = res.data.list
-            this.$message.success('获取数据成功')
+            if (Object.prototype.toString.call(res.data) === '[object Array]'){
+                this.tableData = []
+                this.$message.success('未获取到数据')
+            }else {
+                this.tableData = res.data.list
+                this.$message.success('获取数据成功')
+            }
+
         }
 
         //生命周期
