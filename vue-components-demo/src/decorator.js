@@ -38,6 +38,7 @@
 //========
 /*类的装饰*/
 function log(target) {
+    console.log(target,'tar')
     target.work = 'xxx' //静态属性
 }
 
@@ -67,7 +68,7 @@ const Foo = {
 class Person {
 }
 
-console.log(Person.work)
+// console.log(Person.work)
 
 const Tom = new Person()
 console.log(Tom.data)
@@ -75,8 +76,9 @@ Tom.foo()
 
 
 /*方法的装饰*/
-function logF(target,name,descriptor) {
-
+function logF(target,name,descriptor) { 
+    console.log(target,'gg')
+    console.log(name,'name')
     // descriptor对象原来的值如下
     // {
     //   value: specifiedFunction,
