@@ -1,11 +1,9 @@
 
 export  default function WithHoc(comp,others) {
 
-
     if (others.hasOwnProperty('render')){
         return ;
     }
-
     return {
         ...others,
         render(h){
@@ -15,11 +13,6 @@ export  default function WithHoc(comp,others) {
                     vnode.context = this._self
                     return vnode
                 })
-            console.log(this)
-            console.log(comp,'comp2323')
-
-
-
             return h(comp, {
                 on: this.$listeners,
                 props: this.$data,

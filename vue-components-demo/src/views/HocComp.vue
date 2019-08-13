@@ -4,6 +4,7 @@
         <BaseComp :test="10" :slot="local_data">
             <p v-if="local_data.isOk">BaseComp</p>
         </BaseComp>
+        <p>-----------</p>
         <newComp :open="true" :slot="{local_data,info}">
             <p>{{info}}</p>
             <p v-if="local_data.isOk">sdsd</p>
@@ -18,17 +19,14 @@
     const newComp = WithHoc(BaseComp, {
         created() {
             console.log('newComp created')
-            console.log(this,'created')
         },
-        data(){
+        data() {
             return {
                 test: 11222
             }
         }
     })
 
-    console.log(newComp,'===111')
-    console.log(BaseComp,'===')
     export default {
         name: "HocComp",
         components: {BaseComp, newComp},
