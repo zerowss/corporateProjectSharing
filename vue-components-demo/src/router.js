@@ -29,12 +29,17 @@ export default new Router({
         {
             path: '/comp',
             name: 'comp',
-            component: () => import(/* webpackChunkName: "detail" */ './views/ClassComp.vue')
+            component: () => import(/* webpackChunkName: "comp" */ './views/ClassComp.vue')
         },
         {
             path: '/hcomp',
             name: 'hcomp',
-            component: () => import(/* webpackChunkName: "detail" */ './views/HocComp.vue')
+            component: () => import(/* webpackChunkName: "hcomp" */ './views/HocComp.vue')
+        },
+        {
+            path: '/hunccomp',
+            name: 'hunccomp',
+            component: () => import(/* webpackChunkName: "hunccomp" */ './views/HuncComp.vue')
         }
     ]
 })

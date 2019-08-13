@@ -5,6 +5,9 @@ import store from './store'
 import './main.less'
 Vue.config.productionTip = false
 
+import { plugin as VueFunctionApiPlugin } from 'vue-function-api'
+Vue.use(VueFunctionApiPlugin)
+
 //创建一个Bus类，负责事件派发,监听及回调管理
 Vue.prototype.$bus = new Vue();
 
